@@ -16,10 +16,11 @@ import lombok.Data;
 public class operario {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // O el tipo de generación de clave que uses
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private int id_operario;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "FK_id_Usuario") // Nombre de la columna FK en la tabla 'operario'
-    private usuario usuarioOperario; // Nombre personalizado para la relación
+   /* @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "fk_id_Usuario") // Nombre de la columna FK en la tabla 'operario'*/
+    private int fk_id_Usuario; // Nombre personalizado para la relación
 }
