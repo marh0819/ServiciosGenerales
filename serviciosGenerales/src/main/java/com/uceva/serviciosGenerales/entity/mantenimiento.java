@@ -19,10 +19,10 @@ public class mantenimiento {
     private String nombre_Mantenimiento;
     private String fechaInicio;
     private String fechaFin;
-    private String EstadoMantenimiento;
-    private int PrioridadMantenimiento;
+    private String estadoManteminento;
+    private int prioridadMantenimiento;
     private String descripcionMantenimiento;
-    private int FK_id_AreasFisicas;
-    private int FK_ID_Operario;
+    private int fk_id_AreasFisicas;
+    private int fk_ID_Operario;
     
 }
