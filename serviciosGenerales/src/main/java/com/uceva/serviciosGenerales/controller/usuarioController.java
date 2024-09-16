@@ -28,7 +28,7 @@ public class usuarioController {
         return usuarioService.getUsuarios();
     }
 
-    
+    //
     @GetMapping("/{id_usuario}")
     public Optional<usuario> getByID(@PathVariable("id_usuario") int id_usuario){
         return usuarioService.getUsuario(id_usuario);
