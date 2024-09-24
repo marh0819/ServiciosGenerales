@@ -9,18 +9,14 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name ="areas_fisicas")
-public class AreaFisica {
+@Table(name ="inventarios")
+public class inventario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
-    private int EspacioID;
-    
-    private String Dimensiones;
-    private String Ubicacion;
-    private String Caracteristica;
-    private String Fecha_Creacion;
-    private String Nombre_Espacio;
-    private String Estado;
+    private int id_inventario;
+    private String nombre_objeto;
+    private String Descripcion_objeto;
+    private String cantidad;
 }
