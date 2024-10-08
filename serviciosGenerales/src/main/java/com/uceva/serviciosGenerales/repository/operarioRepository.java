@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.uceva.serviciosGenerales.entity.operario;
 
 @Repository
-public interface operarioRespository extends JpaRepository<operario, Long>{
+public interface operarioRepository extends JpaRepository<operario, Long>{
     
 }

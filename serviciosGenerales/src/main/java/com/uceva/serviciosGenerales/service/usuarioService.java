@@ -7,12 +7,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.uceva.serviciosGenerales.entity.usuario;
-import com.uceva.serviciosGenerales.repository.usuarioRespository;
+import com.uceva.serviciosGenerales.repository.usuarioRepository;
 
 @Service
 public class usuarioService {
     @Autowired
-    usuarioRespository usuarioRespository;
+    usuarioRepository usuarioRespository;
 
     public List<usuario> getUsuarios(){
         return usuarioRespository.findAll();

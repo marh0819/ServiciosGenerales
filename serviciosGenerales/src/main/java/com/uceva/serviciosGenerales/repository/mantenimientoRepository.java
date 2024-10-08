@@ -7,6 +7,6 @@ import com.uceva.serviciosGenerales.entity.mantenimiento;
 
 
 @Repository
-public interface mantenimientoRespository extends JpaRepository<mantenimiento, Long>{
+public interface mantenimientoRepository extends JpaRepository<mantenimiento, Long>{
     
 }

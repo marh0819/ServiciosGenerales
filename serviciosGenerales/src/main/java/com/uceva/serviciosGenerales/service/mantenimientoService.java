@@ -7,30 +7,30 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.uceva.serviciosGenerales.entity.mantenimiento;
-import com.uceva.serviciosGenerales.repository.mantenimientoRespository;
+import com.uceva.serviciosGenerales.repository.mantenimientoRepository;
 
 @Service
 public class mantenimientoService {
     @Autowired
-    mantenimientoRespository mantenimientoRespository;
+    mantenimientoRepository mantenimientoRepository;
 
     public List<mantenimiento> getMantenimientos(){
-        return mantenimientoRespository.findAll();
+        return mantenimientoRepository.findAll();
     }
 
     public Optional<mantenimiento> getMantenimientos(int id){
-        return mantenimientoRespository.findById(Long.valueOf (id));
+        return mantenimientoRepository.findById(Long.valueOf (id));
     }
 
     public void save(mantenimiento mantenimiento){
-        mantenimientoRespository.save(mantenimiento);
+        mantenimientoRepository.save(mantenimiento);
     }
 
     public void update(mantenimiento mantenimiento){
-        mantenimientoRespository.save(mantenimiento);
+        mantenimientoRepository.save(mantenimiento);
     }
 
     public void delete(int id){
-        mantenimientoRespository.deleteById(Long.valueOf (id));
+        mantenimientoRepository.deleteById(Long.valueOf (id));
     }
 }
