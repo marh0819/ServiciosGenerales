@@ -7,30 +7,30 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.uceva.serviciosGenerales.entity.operario;
-import com.uceva.serviciosGenerales.repository.operarioRespository;
+import com.uceva.serviciosGenerales.repository.operarioRepository;
 
 @Service
 public class operarioService {
     @Autowired
-    operarioRespository operarioRespository;
+    operarioRepository operarioRepository;
 
     public List<operario> getOperarios(){
-        return operarioRespository.findAll();
+        return operarioRepository.findAll();
     }
 
     public Optional<operario> getOperarios(int id){
-        return operarioRespository.findById(Long.valueOf (id));
+        return operarioRepository.findById(Long.valueOf (id));
     }
 
     public void save(operario operario){
-        operarioRespository.save(operario);
+        operarioRepository.save(operario);
     }
 
     public void update(operario operario){
-        operarioRespository.save(operario);
+        operarioRepository.save(operario);
     }
 
     public void delete(int id){
-        operarioRespository.deleteById(Long.valueOf (id));
+        operarioRepository.deleteById(Long.valueOf (id));
     }
 }
