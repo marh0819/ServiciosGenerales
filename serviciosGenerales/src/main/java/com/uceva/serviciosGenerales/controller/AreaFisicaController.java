@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -31,23 +33,28 @@ public class AreaFisicaController {
     }
 
     
-    @GetMapping("/{EspacioID}")
-    public Optional<AreaFisica> getByID(@PathVariable("EspacioID") int EspacioID){
-        return areaFisicaService.getAreaFisica(EspacioID);
+    @GetMapping("/{id_area_fisica}")
+    public Optional<AreaFisica> getByID(@PathVariable("id_area_fisica") int id_area_fisica){
+        return areaFisicaService.getAreaFisica(id_area_fisica);
     }
 
-    @PostMapping()
-    public void save(@RequestBody AreaFisica areaFisica){
-        areaFisicaService.save(areaFisica);
+    @PostMapping("/crear")
+public ResponseEntity<AreaFisica> save(@RequestBody AreaFisica areaFisica){
+    try {
+        AreaFisica savedArea = areaFisicaService.save(areaFisica);
+        return new ResponseEntity<>(savedArea, HttpStatus.CREATED);
+    } catch (Exception e) {
+        return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
     }
+}
 
     @PostMapping("/")
     public void Update(@RequestBody AreaFisica areaFisica){
         areaFisicaService.update(areaFisica);
     }
 
-    @DeleteMapping("/{EspacioID}")
-    public void delete(@PathVariable("EspacioID") int EspacioID){
-        areaFisicaService.delete(EspacioID);
+    @DeleteMapping("/{id_area_fisica}")
+    public void delete(@PathVariable("id_area_fisica") int id_area_fisica){
+        areaFisicaService.delete(id_area_fisica);
     }
 }

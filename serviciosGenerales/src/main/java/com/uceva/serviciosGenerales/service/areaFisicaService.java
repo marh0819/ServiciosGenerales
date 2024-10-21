@@ -22,8 +22,8 @@ public class areaFisicaService {
         return areaFisicaRepository.findById(Long.valueOf (id));
     }
 
-    public void save(AreaFisica AreaFisica){
-        areaFisicaRepository.save(AreaFisica);
+    public AreaFisica save(AreaFisica AreaFisica){
+        return areaFisicaRepository.save(AreaFisica);
     }
 
     public void update(AreaFisica AreaFisica){

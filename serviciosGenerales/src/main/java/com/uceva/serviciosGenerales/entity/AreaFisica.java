@@ -15,12 +15,13 @@ public class AreaFisica {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
-    private int EspacioID;
-    
+    private int id_area_fisica;
+    private int id_tipo_espacio; 
+    private int instituciones_idInstitucion;
+    private int ubicaciones_id_ubicacion;
     private String Dimensiones;
-    private String Ubicacion;
     private String Caracteristica;
     private String Fecha_Creacion;
-    private String Nombre_Espacio;
+    private String nombre_area;
     private String Estado;
 }
