@@ -31,4 +31,14 @@ public class institucion {
 
     @Column(name = "Telefono")
     private String telefono;
+
+    // Genera manualmente el getter
+    public Long getIdInstitucion() {
+        return idInstitucion;
+    }
+
+    // Si lo prefieres, puedes agregar también el setter
+    public void setIdInstitucion(Long idInstitucion) {
+        this.idInstitucion = idInstitucion;
+    }
 }
